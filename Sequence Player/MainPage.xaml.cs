@@ -58,5 +58,9 @@ namespace Sequence_Player
 
 
 		}
+
+		private void HamburgerButton_Click(object sender, RoutedEventArgs e) {
+			MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+		}
 	}
 }

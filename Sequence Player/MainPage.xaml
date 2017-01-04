@@ -7,9 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-	<SplitView Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<SplitView x:Name="MySplitView" IsPaneOpen="True" DisplayMode="CompactOverlay" OpenPaneLength="296" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<SplitView.Pane>
-			<StackPanel></StackPanel>
+			<StackPanel>
+				<Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+				<StackPanel Orientation="Horizontal">
+					<Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                       Width="50" Height="50" Background="Transparent"/>
+					<TextBlock Text="Home" FontSize="18" VerticalAlignment="Center" />
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE1D6;"
+                       Width="50" Height="50" Background="Transparent"/>
+					<TextBlock Text="Ask developer" FontSize="18" VerticalAlignment="Center" />
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Content="&#xE12A;"
+                       Width="50" Height="50" Background="Transparent"/>
+					<TextBlock Text="Privacy Policy" FontSize="18" VerticalAlignment="Center" />
+				</StackPanel>
+
+
+			</StackPanel>
 		</SplitView.Pane>
 		<SplitView.Content>
 			<Grid>

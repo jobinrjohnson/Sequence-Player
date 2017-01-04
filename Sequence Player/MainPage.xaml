@@ -9,12 +9,11 @@
 
 	<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<ScrollViewer>
-
-			<StackPanel x:Name="container">
-
-				<!--<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="300"/>-->
-				<Button x:Name="button" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
-
+			<StackPanel Padding="30">
+				<StackPanel x:Name="container" Margin="0,20,0,0">
+					<!--<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="300"/>-->
+				</StackPanel>
+				<Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
 			</StackPanel>
 		</ScrollViewer>
 	</StackPanel>

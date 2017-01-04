@@ -74,5 +74,9 @@ namespace Sequence_Player
 		private void StackPanel_Tapped_1(object sender, TappedRoutedEventArgs e) {
 			Frame.Navigate(typeof(PrivacyPolicy));
 		}
+
+		private void StackPanel_Tapped_2(object sender, TappedRoutedEventArgs e) {
+			Frame.Navigate(typeof(HelpAsk));
+		}
 	}
 }

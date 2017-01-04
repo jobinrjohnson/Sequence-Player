@@ -24,7 +24,7 @@ namespace Sequence_Player {
 			this.InitializeComponent();
 		}
 
-		private void StackPanel_Unloaded(object sender, RoutedEventArgs e) {
+		private void StackPanel_Unloaded(object sender, TappedRoutedEventArgs e) {
 			Frame.Navigate(typeof(MainPage));
 		}
 
@@ -32,5 +32,8 @@ namespace Sequence_Player {
 			MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
 		}
 
+		private void StackPanel_Unloaded_1(object sender, TappedRoutedEventArgs e) {
+			Frame.Navigate(typeof(HelpAsk));
+		}
 	}
 }

@@ -42,7 +42,7 @@ namespace Sequence_Player
 				//this.textBlock.Text = "Picked photo: " + file.Name;
 				var stream = await file.OpenAsync(FileAccessMode.Read);
 
-				TextBox tb = new TextBox();
+				TextBlock tb = new TextBlock();
 				tb.Text = file.Name;
 
 				MediaElement elem = new MediaElement();

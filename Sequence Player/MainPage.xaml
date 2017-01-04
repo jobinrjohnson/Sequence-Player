@@ -48,7 +48,7 @@
 							<!--<TextBlock Text="Filename.mp4"/>
 							<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="100"/>-->
 						</StackPanel>
-						<Button x:Name="button" Content="Add to queue" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
+						<Button x:Name="button" Content="Add Sound" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
 					</StackPanel>
 				</ScrollViewer>
 			</Grid>

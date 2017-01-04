@@ -66,5 +66,13 @@ namespace Sequence_Player
 		private void HamburgerButton_Click(object sender, RoutedEventArgs e) {
 			MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
 		}
+
+		private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e) {
+
+		}
+
+		private void StackPanel_Tapped_1(object sender, TappedRoutedEventArgs e) {
+			Frame.Navigate(typeof(PrivacyPolicy));
+		}
 	}
 }

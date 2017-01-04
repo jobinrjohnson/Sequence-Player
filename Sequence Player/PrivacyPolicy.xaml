@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-	<SplitView x:Name="MySplitView" IsPaneOpen="True" DisplayMode="CompactOverlay" OpenPaneLength="296" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<SplitView x:Name="MySplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" OpenPaneLength="296" CompactPaneLength="50" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup>
@@ -17,7 +17,7 @@
 					</VisualState.StateTriggers>
 					<VisualState.Setters>
 						<Setter Target="MySplitView.IsPaneOpen" Value="True" />
-						<Setter Target="MySplitView.DisplayMode" Value="Inline" />
+						<Setter Target="MySplitView.DisplayMode" Value="CompactInline" />
 					</VisualState.Setters>
 				</VisualState>
 			</VisualStateGroup>
@@ -27,7 +27,7 @@
 			<StackPanel>
 				<Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-				<StackPanel Orientation="Horizontal">
+				<StackPanel Orientation="Horizontal" Tapped="StackPanel_Unloaded">
 					<Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                        Width="50" Height="50" Background="Transparent"/>
 					<TextBlock Text="Home" FontSize="18" VerticalAlignment="Center" />
@@ -55,7 +55,7 @@
 				<StackPanel Padding="30,30,30,30">
 
 					<TextBlock Text="Privacy Policy" FontSize="28"/>
-
+					<WebView x:Name="web" Height="500" Margin="0,30,0,0"/>
 				</StackPanel>
 				
 			</Grid>

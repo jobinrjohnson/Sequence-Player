@@ -7,24 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="auto"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-		<StackPanel Padding="30,30,30,0">
+	<SplitView Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<SplitView.Pane>
+			<StackPanel></StackPanel>
+		</SplitView.Pane>
+		<SplitView.Content>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<StackPanel Padding="30,30,30,30">
 
-			<TextBlock Text="Sequence Player" FontSize="28"/>
+					<TextBlock Text="Sequence Player" FontSize="28"/>
 
-		</StackPanel>
-		<ScrollViewer Grid.Row="1">
-			<StackPanel Padding="30,10,30,30">
-				<StackPanel x:Name="container" Margin="0,20">
-					<!--<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="300"/>-->
 				</StackPanel>
-				<Button x:Name="button" Content="Add to queue" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
-			</StackPanel>
-		</ScrollViewer>
-	</Grid>
+				<ScrollViewer Grid.Row="1">
+					<StackPanel Padding="30,0,30,30">
+						<StackPanel x:Name="container" Margin="0,20">
+							<!--<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="300"/>-->
+						</StackPanel>
+						<Button x:Name="button" Content="Add to queue" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
+					</StackPanel>
+				</ScrollViewer>
+			</Grid>
+		</SplitView.Content>
+	</SplitView>
 
 </Page>

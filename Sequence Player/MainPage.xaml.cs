@@ -42,6 +42,9 @@ namespace Sequence_Player
 				//this.textBlock.Text = "Picked photo: " + file.Name;
 				var stream = await file.OpenAsync(FileAccessMode.Read);
 
+				TextBox tb = new TextBox();
+				tb.Text = file.Name;
+
 				MediaElement elem = new MediaElement();
 				elem.Stretch = Stretch.Fill;
 				elem.Height = 100;
@@ -49,6 +52,7 @@ namespace Sequence_Player
 				elem.AutoPlay = false;
 				elem.SetSource(stream,file.FileType);
 
+				container.Children.Add(tb);
 				container.Children.Add(elem);
 
 			}

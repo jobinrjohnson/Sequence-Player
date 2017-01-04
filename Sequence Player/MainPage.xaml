@@ -5,6 +5,7 @@
     xmlns:local="using:Sequence_Player"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     mc:Ignorable="d">
 	<SplitView x:Name="MySplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" OpenPaneLength="296" CompactPaneLength="50" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -50,6 +51,7 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height="auto"/>
 					<RowDefinition Height="*"/>
+					<RowDefinition Height="auto"/>
 				</Grid.RowDefinitions>
 				<StackPanel Padding="30,30,30,30">
 
@@ -65,6 +67,23 @@
 						<Button x:Name="button" Content="Add Sound" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
 					</StackPanel>
 				</ScrollViewer>
+
+				<StackPanel Grid.Row="2">
+
+					<!--<UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
+         AdUnitId="10865270"
+         HorizontalAlignment="Left"
+         Height="250"
+         VerticalAlignment="Top"
+         Width="300"/>-->
+
+					<!--<UI:AdControl ApplicationId="79e28f17-620f-484e-9584-6769750011e3" AdUnitId="331738"
+						 HorizontalAlignment="Left"
+						 Height="90"
+						 VerticalAlignment="Top"
+						 Width="728"/>-->	
+				</StackPanel>
+
 			</Grid>
 		</SplitView.Content>
 	</SplitView>

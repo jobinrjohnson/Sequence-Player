@@ -63,6 +63,10 @@ namespace Sequence_Player
 
 		}
 
+		protected override void OnNavigatedTo(NavigationEventArgs e) {
+			base.OnNavigatedTo(e);
+		}
+
 		private void HamburgerButton_Click(object sender, RoutedEventArgs e) {
 			MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
 		}

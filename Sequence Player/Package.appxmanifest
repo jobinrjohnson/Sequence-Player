@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="8277JobinJohnson.SequencePlayer" Publisher="CN=7A4CCD7C-0251-4D00-9081-93CE189E534A" Version="1.1.1.0" />
+  <Identity Name="8277JobinJohnson.SequencePlayer" Publisher="CN=7A4CCD7C-0251-4D00-9081-93CE189E534A" Version="1.1.2.0" />
   <mp:PhoneIdentity PhoneProductId="96557874-45a8-4b5a-8e5b-16ed417b93ef" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Sequence Player</DisplayName>

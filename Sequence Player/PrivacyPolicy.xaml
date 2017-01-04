@@ -55,9 +55,10 @@
 				<StackPanel Padding="30,30,30,30">
 
 					<TextBlock Text="Privacy Policy" FontSize="28"/>
-					<WebView x:Name="web" Height="500" Margin="0,30,0,0"/>
 				</StackPanel>
-				
+
+				<WebView Grid.Row="1" x:Name="web" Margin="0,30,0,0"/>
+
 			</Grid>
 		</SplitView.Content>
 	</SplitView>

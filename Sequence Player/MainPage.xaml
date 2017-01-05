@@ -5,6 +5,7 @@
     xmlns:local="using:Sequence_Player"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     mc:Ignorable="d">
 	<SplitView x:Name="MySplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" OpenPaneLength="296" CompactPaneLength="50" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -20,8 +21,19 @@
 					</VisualState.Setters>
 				</VisualState>
 			</VisualStateGroup>
+			<VisualStateGroup>
+				<VisualState>
+					<VisualState.StateTriggers>
+						<AdaptiveTrigger MinWindowWidth="900" />
+					</VisualState.StateTriggers>
+					<VisualState.Setters>
+						<Setter Target="adpanel.(Grid.Row)" Value="0" />
+						<Setter Target="adpanel.(Grid.Column)" Value="1" />
+						<Setter Target="ad.Height" Value="600" />
+					</VisualState.Setters>
+				</VisualState>
+			</VisualStateGroup>
 		</VisualStateManager.VisualStateGroups>
-
 		<SplitView.Pane>
 			<StackPanel>
 				<Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
@@ -41,8 +53,6 @@
                        Width="50" Height="50" Background="Transparent"/>
 					<TextBlock Text="Privacy Policy" FontSize="18" VerticalAlignment="Center" />
 				</StackPanel>
-
-
 			</StackPanel>
 		</SplitView.Pane>
 		<SplitView.Content>
@@ -53,36 +63,32 @@
 					<RowDefinition Height="auto"/>
 				</Grid.RowDefinitions>
 				<StackPanel Padding="30,30,30,30">
-
-					<TextBlock Text="Sequence Player" FontSize="28"/>
-
+					<TextBlock x:Name="title" Text="Sequence Player" FontSize="28"/>
 				</StackPanel>
 				<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-					<StackPanel Padding="30,0,30,30">
-						<StackPanel x:Name="container" Margin="0,20">
-							<!--<TextBlock Text="Filename.mp4"/>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="auto"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="auto"/>
+							<RowDefinition Height="auto"/>
+						</Grid.RowDefinitions>
+						<StackPanel Padding="30,0,30,30">
+							<StackPanel x:Name="container" Margin="0,20">
+								<!--<TextBlock Text="Filename.mp4"/>
 							<MediaElement AutoPlay="True" Stretch="Fill" x:Name="media" AreTransportControlsEnabled="True" Height="100" MinWidth="100"/>-->
+							</StackPanel>
+							<Button x:Name="button" Background="DarkBlue" Foreground="White" Content="Add Sound" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
 						</StackPanel>
-						<Button x:Name="button" Content="Add Sound" HorizontalAlignment="Left" VerticalAlignment="Stretch" Tapped="button_Tapped"/>
-					</StackPanel>
+						<StackPanel x:Name="adpanel" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+							<UI:AdControl x:Name="ad" ApplicationId="79e28f17-620f-484e-9584-6769750011e3"
+							   AdUnitId="331738"
+							   VerticalAlignment="Center" Width="300" Height="200"/>
+						</StackPanel>
+					</Grid>
 				</ScrollViewer>
-
-				<StackPanel Grid.Row="2">
-
-					<!--<UI:AdControl ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1"
-         AdUnitId="10865270"
-         HorizontalAlignment="Left"
-         Height="250"
-         VerticalAlignment="Top"
-         Width="300"/>-->
-
-					<!--<UI:AdControl ApplicationId="79e28f17-620f-484e-9584-6769750011e3" AdUnitId="331738"
-						 HorizontalAlignment="Left"
-						 Height="90"
-						 VerticalAlignment="Top"
-						 Width="728"/>-->	
-				</StackPanel>
-
 			</Grid>
 		</SplitView.Content>
 	</SplitView>

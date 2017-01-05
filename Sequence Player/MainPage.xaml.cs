@@ -65,6 +65,13 @@ namespace Sequence_Player
 
 		protected override void OnNavigatedTo(NavigationEventArgs e) {
 			base.OnNavigatedTo(e);
+			var qualifiers = Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().QualifierValues;
+			if (qualifiers.ContainsKey("DeviceFamily") && qualifiers["DeviceFamily"] == "Mobile") {
+				//ad.ApplicationId = "d44688b7-b3bb-4b2f-8c63-94c2a95ab6d8";
+				//ad.AdUnitId = "331757";
+				ad.Width = 320;
+				ad.Height = 50;
+			}
 		}
 
 		private void HamburgerButton_Click(object sender, RoutedEventArgs e) {

@@ -7,6 +7,9 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -77,7 +80,25 @@ namespace Sequence_Player
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-        }
+
+
+			if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")) {
+				var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+				statusBar.BackgroundColor = Windows.UI.Colors.DarkBlue;
+				statusBar.BackgroundOpacity = 1;
+			}
+
+			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView")) {
+				var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+				if (titleBar != null) {
+					titleBar.ButtonBackgroundColor = Colors.DarkBlue;
+					titleBar.ButtonForegroundColor = Colors.White;
+					titleBar.BackgroundColor = Colors.DarkBlue;
+					titleBar.ForegroundColor = Colors.White;
+				}
+			}
+
+		}
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails

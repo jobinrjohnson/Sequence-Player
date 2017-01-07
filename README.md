@@ -1,11 +1,11 @@
 ![](https://store-images.s-microsoft.com/image/apps.947.9007199266819048.0d956b7b-b2ba-4956-8c18-86c8319a58a9.ce231fc8-8234-42d8-b8be-2dda8423a732?w=180&h=180&q=60)
-# SequencePlayer
+# Sequence Player
 
-[Download on windows store](https://www.microsoft.com/en-us/store/p/sequence-player/9wzdncrcsk8c)
+[Download from windows store](https://www.microsoft.com/en-us/store/p/sequence-player/9wzdncrcsk8c)
 
 *This application provides a way to play music files. This application comes with features like simultaneous playing of multiple files.*
 
-
+#### Screenshots
 
 | PC | Mobile |
 | -------- | -------- |
@@ -15,12 +15,9 @@
 
 #### System Requirements
 
-OS :	Windows 10, Windows 8.1, Windows 10 Mobile
-Architecture :	ARM, x86, x64
-Recommended	OS :	Windows 10, Windows 8.1, Windows 10 Mobile
-Architecture :	ARM, x86, x64
-
-Category :  Utilities & tools
+* OS :	**Windows 10, Windows 8.1, Windows 10 Mobile**
+* Architecture :	**ARM, x86, x64**
+* Category :  **Utilities & tools**
 
 
 

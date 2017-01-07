@@ -13,7 +13,14 @@
 
 
 
+#### System Requirements
 
+OS :	Windows 10, Windows 8.1, Windows 10 Mobile
+Architecture :	ARM, x86, x64
+Recommended	OS :	Windows 10, Windows 8.1, Windows 10 Mobile
+Architecture :	ARM, x86, x64
+
+Category :  Utilities & tools
 
 
 
